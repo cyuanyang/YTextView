@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="YTextView">
+        <attr name="y_selectBackground" format="reference"/>
+        <attr name="y_textSize" format="dimension"/>
+        <attr name="y_textColor" format="color"/>
+        <attr name="y_itemSpace" format="dimension"/>
+    </declare-styleable>
+</resources>
