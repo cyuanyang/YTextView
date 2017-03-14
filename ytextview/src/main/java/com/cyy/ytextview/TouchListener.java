@@ -57,7 +57,7 @@ class TouchListener {
                         if (mCheckFortap == null)mCheckFortap = new CheckForTap();
                         mCheckFortap.activeItem = activeItem;
                         mCheckFortap.yTextView = textView;
-                        textView.postDelayed(mCheckFortap , ViewConfiguration.getTapTimeout()/2);
+                        textView.postDelayed(mCheckFortap , ViewConfiguration.getTapTimeout());
                     }else {
                         textView.setActive(true , activeItem.position);
                         checkLongPress(activeItem);
@@ -67,12 +67,15 @@ class TouchListener {
                 break;
 
             case MotionEvent.ACTION_MOVE:
-                if (activeItem!=null){
-                    textView.setActive(false , activeItem.position);
-                    activeItem = null;
-                }
-                removeTapCallback();
-                removeLongTapCallBack();
+                //判断移动的距离
+                //如果太多 不是点击动作
+
+//                if (activeItem!=null){
+//                    textView.setActive(false , activeItem.position);
+//                    activeItem = null;
+//                }
+//                removeTapCallback();
+//                removeLongTapCallBack();
                 break;
 
             case MotionEvent.ACTION_UP:
